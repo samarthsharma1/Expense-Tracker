@@ -1,6 +1,5 @@
 let name1=document.querySelector('#name');
 let email1=document.querySelector('#email');
-let phonenumber1=document.querySelector('#phonenumber');
 let pwd1=document.querySelector('#pwd');
 let btnsubmit=document.querySelector('#btnsubmit');
 
@@ -9,13 +8,11 @@ btnsubmit.addEventListener('click',(e)=>{
 
     let name=name1.value;
     let email=email1.value;
-    let phonenumber=phonenumber1.value;
     let pwd=pwd1.value;
 
     let obj={
         name:name,
         email:email,
-        phonenumber:phonenumber,
         pwd:pwd
     };
 
@@ -29,7 +26,7 @@ btnsubmit.addEventListener('click',(e)=>{
         alert("Sign up Completed ! Please login to your account")
       }
       else{
-        if(result.data.errors[0].message='Phone number must be unique' || 'Email must be unique' )
+        if(result.data.errors[0].message=='Email must be unique')
         {
           alert("User Already Exist so Please Login ");
         }
