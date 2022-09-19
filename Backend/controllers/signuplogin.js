@@ -1,11 +1,5 @@
-
 let bcrypt=require('bcrypt');
 let User=require('../models/user');
-
-
-
-
-
 
 exports.postuserdata=async (req,res)=>{
 
@@ -17,9 +11,9 @@ User.create({
     name,email,phonenumber,password
 })
 .then(result=>{
-res.json({result,suc:true})
+res.json({result,success:true})
 })
 .catch(err=>{
-    res.json({err});
+    res.json(err);
 })
 }

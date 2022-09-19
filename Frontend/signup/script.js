@@ -4,10 +4,8 @@ let phonenumber1=document.querySelector('#phonenumber');
 let pwd1=document.querySelector('#pwd');
 let btnsubmit=document.querySelector('#btnsubmit');
 
-
 btnsubmit.addEventListener('click',(e)=>{
     e.preventDefault();
-
 
     let name=name1.value;
     let email=email1.value;
@@ -21,20 +19,25 @@ btnsubmit.addEventListener('click',(e)=>{
         pwd:pwd
     };
 
-
-    
-
-
-    axios
-      .post("http://localhost:8400/register",obj)
+    axios.post("http://localhost:8400/register",obj)
       .then((result) => {
-        console.log(result);
-      })
+       // console.log(result);
+      
+     
+      if(result.data.success==true)
+      {
+        alert("Sign up Completed ! Please login to your account")
+      }
+      else{
+        if(result.data.errors[0].message='Phone number must be unique' || 'Email must be unique' )
+        {
+          alert("User Already Exist so Please Login ");
+        }
+      }
+    })
       .catch((err) => {
         console.log(err);
       });
-
-
 })
 
 
