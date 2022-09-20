@@ -3,7 +3,7 @@ let router = express.Router();
 let Controllers=require('../controllers/signuplogin');
 
 
-router.post('/register',Controllers.signup);
+router.post('/signup',Controllers.signup);
 
 router.post('/login',Controllers.login)
 

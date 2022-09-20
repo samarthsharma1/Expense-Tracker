@@ -1,6 +1,3 @@
-var email=document.querySelector('#emaillog');
-var pwd=document.querySelector('#pwdlog');
-
 
 async function login(event) {
   try{

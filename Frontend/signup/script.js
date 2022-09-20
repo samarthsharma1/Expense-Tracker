@@ -16,21 +16,18 @@ btnsubmit.addEventListener('click',(e)=>{
         password:password
     };
 
-    axios.post("http://localhost:3000/register",obj)
+    axios.post("http://localhost:3000/signup",obj)
       .then((result) => {
        // console.log(result);
       
      
-      if(result.data.success==true)
+      if(result.status==201)
       {
         console.log("Signup Done");
         window.location.href='../login.html'
       }
       else{
-        if(result.data.errors[0].message=='Email must be unique')
-        {
-          alert("User Already Exist so Please Login ");
-        }
+          alert("User Already Exist Or Something went wrong ");
       }
     })
       .catch((err) => {
