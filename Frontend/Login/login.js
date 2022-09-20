@@ -1,38 +1,30 @@
-let email=document.querySelector('#emaillog');
-let pwd=document.querySelector('#pwdlog');
-let btnsubmit=document.querySelector('#btnlogin');
+var email=document.querySelector('#emaillog');
+var pwd=document.querySelector('#pwdlog');
 
 
-btnsubmit.addEventListener('click',(e)=>{
-  e.preventDefault();
+async function login(event) {
+  try{
+  event.preventDefault()
 
-  let email2=email.value;
-  let pwd2=pwd.value;
+  let email = document.getElementById('email').value
+  let password =document.getElementById('password').value
+  let logindetails = {
+  email : email,
+  password: password
+}
+console.log(logindetails);
+const data=await axios.post('http://localhost:3000/login',logindetails)
 
-  let obj={
-    email:email2,
-    pwd:pwd2
-  }
-
-  axios.post("http://localhost:8400/login", obj)
-  .then(result=>{
-    if(result.data.msg=='login successful'){
-      localStorage.setItem('token',result.data.token);
-          location.replace("../homepage/home.html");
-    }
-    
-  })
-  .catch(err=>{
-    if(err.response.status==404||401){
-
-      alert("user not found")
-
-    }
-  })
-
-
-});
-
-
-
-
+ if(data.status==200){
+  alert(data.data.message)
+  window.location.href='./expense.html'
+ }
+ else{
+  alert(data.data.message)
+ } 
+}
+ catch(err){
+  document.body.innerHTML+=`<div style="color:red;">${err.message}</div>:`
+alert(err);
+ }
+}

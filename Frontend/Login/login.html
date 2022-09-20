@@ -12,60 +12,36 @@
 <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-  <a href="../signform/signup.html" id="rtosignup">Sign Up</a>
-<h3 id="welcomeotoexpense">
-
-
-    SAMARTH EXPENSE TRACKER.
-
-    
-
-</h3>
-
-
-
-
-
-
+  <a href="../signup/signup.html" id="rtosignup">Sign Up</a>
+<h3 id="welcomeotoexpense">SAMARTH EXPENSE TRACKER </h3>
     <div class="container">
 
     <div class="login-box">         <h5 class="text-center">Log In</h5>
 
-  <form>
-    <div class="user-box">
-      <input type="email" name="" required="" id="emaillog">
+  <form onsubmit="login(event)">
+    <div class="user-box" >
+      <input type="email" name="" required="" id="email">
       <label>EMAIL</label>
     </div>
     
     <div class="user-box">
-      <input type="password" name="" required="" id="pwdlog">
+      <input type="password" name="" required="" id="password">
       <label>PASSWORD</label>
     </div>
-
-   
-    <button id="btnlogin" class="">
-
+    <button type="submit" id="btnlogin" class="">
       Log  In
     </button>
     <br>
     <div class="signer">
-                  <a id="signer" href="../signform/signup.html" > Don't  have an account?</a>
-
+                  <a id="signer" href="../signup/signup.html" > Don't  have an account?</a>
     </div>
-
   </form>
 </div>
-
 </div>
-
     <div class="forgotpassword">
-
       <a href="../forgotpassword/forgot.html" id="forgotpassword">forgot password?</a>
-
     </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
-<script src="./scriptlogin.js"></script>
+<script src="./login.js"></script>
 </body>
 </html>

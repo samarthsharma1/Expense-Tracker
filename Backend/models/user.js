@@ -24,11 +24,6 @@ let User=sequelize.define('user',{
         type:Sequelize.STRING,
         allowNull:false
     },
-    issubcribed:{
-        type:Sequelize.BOOLEAN,
-        defaultValue:false
-    }
-
 });
 
 module.exports=User;

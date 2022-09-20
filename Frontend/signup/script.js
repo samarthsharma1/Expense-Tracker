@@ -8,22 +8,23 @@ btnsubmit.addEventListener('click',(e)=>{
 
     let name=name1.value;
     let email=email1.value;
-    let pwd=pwd1.value;
+    let password=pwd1.value;
 
     let obj={
         name:name,
         email:email,
-        pwd:pwd
+        password:password
     };
 
-    axios.post("http://localhost:8400/register",obj)
+    axios.post("http://localhost:3000/register",obj)
       .then((result) => {
        // console.log(result);
       
      
       if(result.data.success==true)
       {
-        alert("Sign up Completed ! Please login to your account")
+        console.log("Signup Done");
+        window.location.href='../login.html'
       }
       else{
         if(result.data.errors[0].message=='Email must be unique')

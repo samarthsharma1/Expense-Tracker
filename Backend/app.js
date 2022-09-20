@@ -19,7 +19,7 @@ sequelize
   .sync()
   .then((result) => {
     // console.log(result);
-    app.listen(8400, () => {
+    app.listen(3000, () => {
       console.log(" listening to 8400 port ");
     });
   })
