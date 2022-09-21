@@ -1,0 +1,364 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  
+  #nav{
+    background-color:lightseagreen;
+    padding: 25px;
+    display: flex;
+    width: 100%;
+    color: black;
+  
+  }
+  #user{
+    display: flex;
+  
+  }
+  #userwelcome{
+  margin-left: 20vw;
+  color:black;
+  letter-spacing: 1px;
+  }
+  .userdetail{
+    margin-left: 1%;
+    color: white;
+  }
+  .wel{
+    color: black;
+    margin-left: 55px;
+  }
+  #regform{
+  
+    margin-top: 20px;
+    width: 55%;
+    margin: auto;
+    padding: 15px;
+    background-color: lightgreen;
+    margin-top: 40px;
+    border: double;
+  
+  }
+  .fa-caret-down{
+    color: white;
+    margin-left: 2%;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  #dropshow{
+    
+    color: white;
+    margin-left: 2%;
+    cursor: pointer;
+  
+  }
+  #buysub{
+    border: none;
+    background-color: white;
+  }
+  .adex{
+    margin-bottom: 20px;
+    margin-left: 3%;
+    color: darkblue;
+  }
+  #category{
+  font-weight: 550;
+      margin-inline: 5px;
+      width: 50%;
+        border: double;
+        color: blueviolet;
+        background-color:lightgoldenrodyellow;
+    outline: gold;
+  padding: 5px;}
+  #description{
+    font-weight: 550; 
+    margin-inline: 10px;
+    border: dotted;
+    outline: none;
+    padding: 7px;
+    width: 27vw;
+  }
+  #amount{
+    font-weight: 550;
+  
+      margin-inline: 30px;
+      width: 17%;
+        border: none;
+    outline: none;
+  padding: 5px;
+  
+  
+  }
+  #addexpensebtn{
+    border: none;
+    
+    color: blue;
+    padding: 8px;
+    border-radius: 6px;
+    margin-left: 1.2vw;
+  }
+
+  option:hover{
+    background-color: blue;
+    color: white;
+  }
+  
+  #expensebox{
+    width: 85%;
+    margin: auto;
+      margin-top: 50px;
+    background-color: lightcoral;
+    padding: 20px;
+    border: 4px outset black;
+  }
+  .singleexpense{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 0px;
+  }
+  .exphead{
+    
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 4px;
+  
+  }
+  .exphead1{
+    margin-right: 8vw;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .exphead2{
+      margin-right: 8vw;
+      
+    font-size: 20px;
+    font-weight: 500;
+    
+  }
+  .exphead3{
+    
+    font-size: 20px;
+    font-weight: 500;
+  
+  
+  }
+  
+  #alertpopup{
+      position:fixed;
+      top: 45px;
+      right:50%;
+  }
+  .notification {
+      background-color: rgb(236, 4, 47);
+      border-radius: 5px;
+      color: white;
+      padding: 0.7rem;
+      margin: 1rem;
+  }
+  
+  .ifempty{
+      position:fixed;
+      top: 45px;
+      right:50%;
+  }
+  .alertempty {
+      background-color: rgb(236, 4, 47);
+      border-radius: 5px;
+      color: white;
+      padding: 0.7rem;
+      margin: 1rem;
+  }
+  .gprice{
+    
+    margin-right: 10vw;
+    font-size: 20px;
+    font-weight: 500;
+  
+  }
+  .gcategory{
+    margin-right: 8vw;
+      
+    font-size: 20px;
+    font-weight: 500;
+    
+  
+  }
+  .gdescription{
+      font-size: 20px;
+    font-weight: 500;
+  
+  }
+  
+  .droplist{
+    list-style: none;
+  
+  }
+  .droplist li{
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .droplist li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  .dropoptions{
+    background-color: white;
+    border: 2px solid black;
+    width: 13vw;
+    padding: 0px;
+    float: right;
+    margin-right:3% ;
+    display: none;
+  
+  
+  }
+  
+  #addexpensebtn:hover{
+    background-color: black;
+  }
+  #hidedrop{
+    margin-left: 8vw;
+    font-size: 20px;
+    color:greenyellow;
+  }
+  
+  .allbtns{
+    border: none;
+    padding: 7px;
+    background-color: blue;
+    color: white;
+    width: 40px;
+  }
+  .fot{
+      width: 100%;
+      background-color: black;
+      display: grid;
+      place-items: center;
+      
+  }
+  
+  
+    @media screen and (max-width: 480px) {
+    
+      #regform{
+        width: 85%;
+        display: grid;
+        place-items: center;
+  
+      }
+      .adex{
+        margin-bottom: 40px;
+      }
+      #category{
+        width: 95%;
+        margin-bottom: 13px;
+      }
+      #description{
+        width: 95%;
+              margin-bottom: 23px;
+  
+      }
+      #amount{
+        width: 95%;
+              margin-bottom: 13px;
+  
+      }
+  }
+  
+  
+  
+  
+  
+  #regform{
+      width: 25vw;
+      display: grid;
+      place-items: center;
+      background-color:lightblue;
+      padding: 10px;
+      margin: auto;
+      border: 2px solid rgb(21, 17, 17);
+      margin-top: 3%;
+      border-radius: 15px;
+  }
+  #amount{
+  width: 100%;
+    padding: 10px 0;
+    font-size: 21px;
+    color: black;
+    margin-bottom: 17px;
+    border: none;
+    border-bottom: 4px solid green;
+    outline: none;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px;
+  font-weight: 500;
+  }
+    #description{
+      width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(10, 2, 2);
+    margin-bottom: 17px;
+    border: none;
+    border-bottom: 4px solid green;
+    outline: none;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px;
+  
+    }
+    #expensetype{
+  
+      width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(10, 2, 2);
+    margin-bottom: 17px;
+    border: none;
+    border-bottom: 2px solid rgb(25, 18, 18);
+    outline: none;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px;
+    }
+  
+    #a1{
+      margin-bottom: 20px;
+      color: dimgray;
+    }
+    #addexpensebtn{
+      margin-top: 15px;
+      border: none;
+      padding: 7px;
+        background-color:blue;
+      font-size: 21px;
+      font-weight: 400;
+      border-radius: 7px;
+      color: white;
+    }
+  
+      #addexpensebtn:hover{
+  
+      }
+    @media screen and (max-width: 480px) {
+    
+      #regform{
+        width: 85%;
+  
+      }
+      
+  }
+  
+  
+  
