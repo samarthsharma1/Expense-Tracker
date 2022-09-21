@@ -11,12 +11,13 @@ let SignUpLogin=require('./routes/usersignup');
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(SignUpLogin);
-
+app.use(SignUpLogin); 
+ 
 
 
 sequelize
   .sync()
+  //.sync({force:true})
   .then((result) => {
     // console.log(result);
     app.listen(3000, () => {

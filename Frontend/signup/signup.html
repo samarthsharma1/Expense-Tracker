@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="back">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 
     <div class="login-box">         <h4 class="text-center">SIGN UP</h4>
 
-  <form>
+  <form onsubmit="createUser(event)">
     <div class="user-box">
       <input type="text" name="" required="" id="name">
       <label>NAME</label>
@@ -30,7 +30,7 @@
       <label>EMAIL</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="" id="pwd">
+      <input type="password" name="" required="" id="password">
       <label>PASSWORD</label>
     </div>
    

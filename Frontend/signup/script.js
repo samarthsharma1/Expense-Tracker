@@ -1,14 +1,10 @@
-let name1=document.querySelector('#name');
-let email1=document.querySelector('#email');
-let pwd1=document.querySelector('#pwd');
-let btnsubmit=document.querySelector('#btnsubmit');
-
-btnsubmit.addEventListener('click',(e)=>{
-    e.preventDefault();
-
-    let name=name1.value;
-    let email=email1.value;
-    let password=pwd1.value;
+async function createUser(event){
+try{
+  event.preventDefault()
+  
+  let name=document.getElementById('name').value
+  let email=document.getElementById('email').value
+  let password=document.getElementById('password').value
 
     let obj={
         name:name,
@@ -16,24 +12,21 @@ btnsubmit.addEventListener('click',(e)=>{
         password:password
     };
 
-    axios.post("http://localhost:3000/signup",obj)
-      .then((result) => {
-       // console.log(result);
+const result= await axios.post("http://localhost:3000/signup",obj)
       
-     
-      if(result.status==201)
+     if(result.status==201)
       {
         console.log("Signup Done");
-        window.location.href='../login.html'
+        alert(result.data.message);
+        window.location.href='../Login/login.html';
       }
       else{
-          alert("User Already Exist Or Something went wrong ");
+       // throw new Error('Something went wrong')
+       document.body.innerHTML+=`<div style="color:red;">${result.data.message}</div>:`
       }
-    })
-      .catch((err) => {
-        console.log(err);
-      });
-})
-
-
-
+    }
+      catch(err) {
+        document.body.innerHTML+=`<div style="color:red;">${err.message}</div>:`
+        alert(err);
+      }
+}
