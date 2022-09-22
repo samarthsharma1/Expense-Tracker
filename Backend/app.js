@@ -8,10 +8,12 @@ const sequelize = require("./models/database");
 
 let app=express();
 let SignUpLogin=require('./routes/usersignup');
+let Expenseroute=require('./routes/expense');
 
 app.use(bodyParser.json());
 app.use(cors());
 app.use(SignUpLogin); 
+app.use(Expenseroute);
  
 
 
@@ -21,7 +23,7 @@ sequelize
   .then((result) => {
     // console.log(result);
     app.listen(3000, () => {
-      console.log(" listening to 8400 port ");
+      console.log(" listening to 3000 port ");
     });
   })
   .catch((err) => {

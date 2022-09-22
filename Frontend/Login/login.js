@@ -14,7 +14,7 @@ const data=await axios.post('http://localhost:3000/login',logindetails)
 
  if(data.status==200){
   alert(data.data.message)
-  window.location.href='./expense.html'
+  window.location.href='../Expense/expense.html'
  }
  else{
   alert(data.data.message)

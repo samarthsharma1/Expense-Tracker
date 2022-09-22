@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>welcome to expense tracker</title>
+    <title>Samarth expense tracker</title>
     <!-- CSS only -->
     <script
       src="https://kit.fontawesome.com/134da7a391.js"
@@ -22,12 +22,12 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./expense.css" />
   </head>
   <body>
     <div id="nav">
-      <h5 class="wel">SAMARTH EXPENSE TRACKER</h5>
-
+      <h4 class="wel">SAMARTH EXPENSE TRACKER</h4>
+      <a href="../signup/signup.html" id="rtosignup">Sign Up</a>
       <div id="user">
         <h5 id="userwelcome">WELCOME</h5>
         <h5 class="userdetail"></h5>
@@ -53,18 +53,20 @@
 
     <!--  -->
 
-    <form action="" method="post" id="regform">
+    <form action="" method="post" id="regform" onsubmit="expenseDetails(event)">
       <h4 class="adex">Add Expense</h4>
       <input type="text" class="" id="amount" placeholder="Enter Amount" />
       <select id="category">
         <option value="">Select Category</option>
-        <option value="food">Travel</option>
-        <option value="food">Clothes</option>
-        <option value="food">Food</option>
-        <option value="fuel">Fuel</option>
-        <option value="glosaries">Grocery</option>
-        <option value="electricity">Electricity</option>
-        <option value="gas">Gas</option>
+        <option value="Travel">Travel</option>
+        <option value="Cloth">Clothes</option>
+        <option value="Food">Food</option>
+        <option value="Fuel">Fuel</option>
+        <option value="Grocery">Grocery</option>
+        <option value="Electricity">Electricity</option>
+        <option value="Gas">Gas</option>
+        <option value="EMI">EMI</option>
+        <option value="Recharge">Recharge</option>
         <option value="others">Others</option>
       </select>
 
@@ -72,24 +74,11 @@
 
       <button id="addexpensebtn">Add Expense</button>
     </form>
+<br><br><br><br><br>
+<div class="box1">
+    <h1 class="expenses12">YOUR EXPENSES HISTORY</h1><br><br>
 
-    <div class="" id="expensebox">
-      <h3 style="color: black; margin-left: 4vw; margin-bottom: 20px">
-        Your Expense History
-      </h3>
-      <div class="pag text-center my-4">
-
-
-    </div>
-      <div class="exphead">
-        <span class="exphead1">Amount</span>
-        <span class="exphead2">Category</span>
-        <span class="exphead3">Description</span>
-      </div>
-      <div class="expensedetails"></div>
-      
-
-
+    <ul id="ul"></ul>
     </div>
     <div id="alertpopup"></div>
 
@@ -101,20 +90,15 @@
 
     <div class="topfot mt-5">
       <div class="fot p-5">
-        <h5 class="text-warning">Follow us on social media</h5>
-        <h6 class="text-light">
-          <span class="text-danger">@</span> Copyright 2021-2022 by SIVA PRASAD
-          . All Rights Reserved . Expense is Powered by sivaprasad.
-        </h6>
+        <h5 class="text-warning">This app is built by Samarth Sharma where users can keep the
+           track of there Expenses and Premimum account feature is also present here.This app   
+          is built by SamarthTech.pvt.ltd You can contact us on website or directly visit our 
+          office in case of any query Copyright 2022@ All rights are reservrd </h5></div>
+        
       </div>
     </div>
 
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
-    <script src="./scripthome.js"></script>
+    <script src="./expense.js"></script>
   </body>
 </html>

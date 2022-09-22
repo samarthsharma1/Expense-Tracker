@@ -6,7 +6,7 @@
   
   #nav{
     background-color:lightseagreen;
-    padding: 25px;
+    padding: 30px;
     display: flex;
     width: 100%;
     color: black;
@@ -20,7 +20,9 @@
   margin-left: 20vw;
   color:black;
   letter-spacing: 1px;
+
   }
+  
   .userdetail{
     margin-left: 1%;
     color: white;
@@ -67,9 +69,9 @@
       margin-inline: 5px;
       width: 50%;
         border: double;
-        color: blueviolet;
-        background-color:lightgoldenrodyellow;
-    outline: gold;
+        color: white;
+        background-color: black;
+    outline: white;
   padding: 5px;}
   #description{
     font-weight: 550; 
@@ -108,7 +110,7 @@
     width: 85%;
     margin: auto;
       margin-top: 50px;
-    background-color: lightcoral;
+    background-color: lightblue;
     padding: 20px;
     border: 4px outset black;
   }
@@ -240,8 +242,13 @@
   .fot{
       width: 100%;
       background-color: black;
-      display: grid;
+      display: flex;
+      height: fit-content;
       place-items: center;
+      padding: 20px;
+      margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
       
   }
   
@@ -348,9 +355,44 @@
       color: white;
     }
   
-      #addexpensebtn:hover{
+    .expenses1{
+      
+      font-size: 28px;
+      margin-left:  5px; 
+      color:red;
+    }
+    .expenses12{
+      word-spacing: 25px;
+      font-size: 30px;
+      margin-left:  500px; 
+      color:darkblue;
+    }
+    .box1{
+      background-color: lightgrey;
+      width: auto;
+      border:10px solid black;
+      padding: 50px;
+      margin: 20px;
+    }
+
+    #rtosignup{
   
-      }
+      text-decoration: none;
+      right: 7%;
+      top: 3%;
+      position: absolute;
+      padding: 12px;
+      background-color: black;
+      color: white;
+      border-radius: 6px;
+      
+    }
+
+    .bttn{
+      font-size: 24px;
+      
+    }
+     
     @media screen and (max-width: 480px) {
     
       #regform{
