@@ -14,6 +14,7 @@ const data=await axios.post('http://localhost:3000/login',logindetails)
 
  if(data.status==200){
   alert(data.data.message)
+  localStorage.setItem('token',data.data.token);
   window.location.href='../Expense/expense.html'
  }
  else{

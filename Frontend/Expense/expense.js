@@ -5,9 +5,11 @@ async function expenseDetails(event){
         amount: document.getElementById("amount").value,
         description: document.getElementById("description").value,
         category: document.getElementById("category").value,
+        userId:1
       };
     console.log(expenseDetails);
-    const data=await axios.post("http://localhost:3000/addexpense", expenseDetails)
+    const token=localStorage.getItem('token')
+    const data=await axios.post("http://localhost:3000/addexpense", expenseDetails,{headers:{"Authorization":token}})
     if(data.status===201){
         console.log(data.data);
           alert(data.data.message)
@@ -25,13 +27,14 @@ async function expenseDetails(event){
 
         const li= `<li id="${p}" class="expenses1"> Rs.${expense.amount}====Category====>${expense.category}====Description====>${expense.description}
          
-         <button onclick = deleteUser('${expense.id}') style="color:white; float:right ;margin-right:150px; background-color:black" class="bttn"> Delete </button> 
+         <button onclick = deleteUser('${expense.id}') class="bttn"> Delete </button> 
           </li>`
      
     d.innerHTML= d.innerHTML+ li ;
        }
        window.addEventListener('DOMContentLoaded',()=>{
-        axios.get("http://localhost:3000/getexpense")
+        const token=localStorage.getItem('token')
+        axios.get("http://localhost:3000/getexpense",{headers:{"Authorization":token}})
         .then(response=>{
             response.data.expenses.forEach(expense=>{
                 addonScreen(expense)
@@ -40,7 +43,8 @@ async function expenseDetails(event){
        })
     
        function deleteUser(expenseid){
-        axios.delete(`http://localhost:3000/deleteuser/${expenseid}`).then(()=>{
+        const token=localStorage.getItem('token')
+        axios.delete(`http://localhost:3000/deleteuser/${expenseid}`,{headers:{"Authorization":token}}).then(()=>{
             removeuserfromScreen(expenseid);
             console.log('done')
         })

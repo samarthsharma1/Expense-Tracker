@@ -359,7 +359,7 @@
       
       font-size: 28px;
       margin-left:  5px; 
-      color:red;
+      color:red
     }
     .expenses12{
       word-spacing: 25px;
@@ -390,6 +390,11 @@
 
     .bttn{
       font-size: 24px;
+      color:white;
+      padding:0.1px;
+       float:right ;
+       margin-right:150px; 
+       background-color:black
       
     }
      
