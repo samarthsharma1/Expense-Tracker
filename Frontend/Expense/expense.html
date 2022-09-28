@@ -27,9 +27,11 @@
   <body>
     <div id="nav">
       <h4 class="wel">SAMARTH EXPENSE TRACKER</h4>
+      <button id="premiumbtn" class="rtosignup" onclick="gopremium(event)">Premimum</button>
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       <a href="../signup/signup.html" id="rtosignup">Sign Up</a>
       <div id="user">
-        <h5 id="userwelcome">WELCOME</h5>
+        <h5 id="userwelcome"></h5>
         <h5 class="userdetail"></h5>
         <div id="dropshow"><i id="droper" class="fa-solid fa-caret-down fa-lg"></i></div>
       </div>
@@ -39,15 +41,14 @@
     <div class="ifempty text-center text-danger"></div>
 
     <!--  -->
-
     <div class="dropoptions">
       <ul class="droplist">
-        <li id="hidedrop">X</li>
-        <li><a href="">Profile</a></li>
-        <li><button id="buysub">Buy Subsciption</button></li>
+        <li id="hidedrop"></li>
+        <li><a href=""></a></li>
+        <li><button id="buysub"></button></li>
              <div class="subfeatures"></div>
         
-        <li class="text-danger" id="logout">Sign out</li>
+        <li class="text-danger" id="logout"></li>
       </ul>
     </div>
 
