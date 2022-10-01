@@ -25,7 +25,7 @@ Order.belongsTo(User);
 app.use(bodyParser.json());
 app.use(cors());
 app.use(SignUpLogin); 
-app.use(Expenseroute);
+app.use('/expense',Expenseroute);
  
 const purchaseRoutes = require('./routes/purchase')
 app.use('/purchase',purchaseRoutes)

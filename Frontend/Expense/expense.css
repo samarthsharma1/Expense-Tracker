@@ -378,7 +378,7 @@
     #rtosignup{
   
       text-decoration: none;
-      right: 7%;
+      right: 5%;
       top: 3%;
       position: absolute;
       padding: 12px;
@@ -400,6 +400,32 @@
       border-radius: 6px;
       
     }
+
+    .new1{
+     text-decoration: none;
+      right: 27%;
+      top: 3%;
+      position: absolute;
+      border-color: black;
+      padding: 12px;
+      background-color: darkmagenta;
+      color: white;
+      border-radius: 6px;
+      
+    }
+
+    .new2{
+      text-decoration: none;
+       right: 50%;
+       top: 3%;
+       position: absolute;
+       border-color: black;
+       padding: 12px;
+       background-color: darkmagenta;
+       color: white;
+       border-radius: 6px;
+       
+     }
 
     .bttn{
       font-size: 24px;

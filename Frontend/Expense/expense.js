@@ -10,7 +10,7 @@ async function expenseDetails(event){
       };
     console.log(expenseDetails);
     const token=localStorage.getItem('token')
-    const data=await axios.post("http://localhost:3000/addexpense", expenseDetails,{headers:{"Authorization":token}})
+    const data=await axios.post("http://localhost:3000/expense/addexpense", expenseDetails,{headers:{"Authorization":token}})
     if(data.status===201){
         console.log(data.data);
           alert(data.data.message)
@@ -35,8 +35,14 @@ async function expenseDetails(event){
        }
        window.addEventListener('DOMContentLoaded',()=>{
         const token=localStorage.getItem('token')
-        axios.get("http://localhost:3000/getexpense",{headers:{"Authorization":token}})
+        console.log(token);
+        axios.get("http://localhost:3000/expense/getexpense",{headers:{"Authorization":token}})
         .then(response=>{
+            if(response.data.user.ispremiumuser===true){
+                let pop = document.getElementById("pop");
+                let btn = `<a href='../Premium/premiumexpense.html' class="new1" id="popbtn">See Premium Facility</a>`;
+                pop.innerHTML += btn;
+               }
             response.data.expenses.forEach(expense=>{
                 addonScreen(expense)
             })
@@ -45,7 +51,7 @@ async function expenseDetails(event){
     
        function deleteUser(expenseid){
         const token=localStorage.getItem('token')
-        axios.delete(`http://localhost:3000/deleteuser/${expenseid}`,{headers:{"Authorization":token}}).then(()=>{
+        axios.delete(`http://localhost:3000/expense/deleteuser/${expenseid}`,{headers:{"Authorization":token}}).then(()=>{
             removeuserfromScreen(expenseid);
             console.log('done')
         })

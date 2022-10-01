@@ -27,9 +27,13 @@
   <body>
     <div id="nav">
       <h4 class="wel">SAMARTH EXPENSE TRACKER</h4>
-      <button id="premiumbtn" class="rtosignup" onclick="gopremium(event)">Premimum</button>
+      <button onclick="download()" class="new2">Download</button>
+      <button id="premiumbtn" class="rtosignup" onclick="gopremium(event)">Buy Subscription</button>
+      <ul id="pop">
+
+      </ul>
       <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-      <a href="../signup/signup.html" id="rtosignup">Sign Up</a>
+      <a href="../signup/signup.html" id="rtosignup">LOG OUT</a>
       <div id="user">
         <h5 id="userwelcome"></h5>
         <h5 class="userdetail"></h5>
@@ -80,6 +84,7 @@
     <h1 class="expenses12">YOUR EXPENSES HISTORY</h1><br><br>
 
     <ul id="ul"></ul>
+  
     </div>
     <div id="alertpopup"></div>
 

@@ -1,4 +1,5 @@
 const Expense=require('../models/expense')
+const User=require('../models/user')
 
 exports.addExpense=(req,res,next)=>{
     const{amount,description,category}=req.body
@@ -21,7 +22,7 @@ exports.addExpense=(req,res,next)=>{
 exports.showExpense = (req,res,next)=>{
     Expense.findAll({where:{userId:req.user.id}})
     .then(expenses=>{
-        return res.status(200).json({expenses,success:true})
+        return res.status(200).json({expenses,success:true,user:req.user})
     })
 }
 exports.deleteexpense = (req, res) => {
@@ -41,3 +42,21 @@ exports.deleteexpense = (req, res) => {
         return res.status(403).json({ success: true, message: "Failed"})
     })
 }
+
+
+exports.showExpensePremium=(req,res,next)=>{
+
+    User.findAll()
+    .then(users=>{
+     res.status(200).json({users,success:true})
+    })
+  }
+
+
+  exports.seeExpensePremium = (req,res,next)=>{
+      const id =  req.params.id
+      Expense.findAll({where:{userId:id}})
+      .then(users=>{
+       res.status(200).json({users,success:true})
+      })
+    }

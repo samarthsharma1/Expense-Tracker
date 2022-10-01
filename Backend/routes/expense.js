@@ -10,4 +10,8 @@ router.post('/addexpense', authentication.authenticate,expenseController.addExpe
 router.get('/getexpense', authentication.authenticate ,expenseController.showExpense)
 
 router.delete('/deleteuser/:expenseid', authentication.authenticate ,expenseController.deleteexpense)
+
+router.get('/getallusers', expenseController.showExpensePremium)
+
+router.get('/getallexpense/:id', expenseController.seeExpensePremium)
 module.exports = router
