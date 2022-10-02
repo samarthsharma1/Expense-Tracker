@@ -14,4 +14,7 @@ router.delete('/deleteuser/:expenseid', authentication.authenticate ,expenseCont
 router.get('/getallusers', expenseController.showExpensePremium)
 
 router.get('/getallexpense/:id', expenseController.seeExpensePremium)
+
+router.get('/download' , authentication.authenticate, expenseController.downloadexpense)
+
 module.exports = router
